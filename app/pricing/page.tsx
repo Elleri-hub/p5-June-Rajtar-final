@@ -3,42 +3,37 @@
 import { Button } from "@heroui/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { addToast } from "@heroui/toast";
-import { Accordion, AccordionItem } from "@heroui/react";
-
-import { title } from "@/components/primitives";
 
 export default function PricingPage() {
   const thisDoesNothingToast = () => {
     addToast({
-      title: "Hey!",
+      title: "Ordered!",
       description:
-        "This button does nothing. But you can make it do something!",
+        "Congragulations you have ordered at McDonalds, enjoy your order!",
       color: "danger",
     });
   };
 
   return (
     <div>
-      <h1 className={title()}>Pricing</h1>
-
-      <p>Pricing? Boring!</p>
-
+      <h1 className="color : bg-red-600 text-center text-5xl">Ordering</h1>
       <section className="mt-20">
-        <h2 className="text-center text-4xl font-bold">Example Plans</h2>
+        <h2 className="color : bg-yellow-400 text-center text-3xl">Menu</h2>
         <div className="flex justify-center gap-8 mt-20">
           {/* plan 1 */}
           <Card className="p-6 w-1/3">
             <CardHeader>
               <div className="text-3xl text-center w-full font-extrabold text-primary">
-                $29.99 <span className="text-sm">/mo</span>
+                $6 McDouble Meal Deal
+                <span className="text-sm" />
               </div>
             </CardHeader>
             <CardBody>
               <ul className="list-disc pl-5 text-xl">
-                <li>1,000 monthly orders</li>
-                <li>5,000 customer limit</li>
-                <li>Manual bookkeeping and invoices</li>
-                <li>Standard shipping</li>
+                <li>McDouble sandwich</li>
+                <li>4-Piece chicken nuggets</li>
+                <li>Small world famous fries</li>
+                <li>Small Coca-Cola</li>
               </ul>
             </CardBody>
             <CardFooter className="justify-center">
@@ -49,7 +44,7 @@ export default function PricingPage() {
                   thisDoesNothingToast();
                 }}
               >
-                Sign Up
+                Order
               </Button>
             </CardFooter>
           </Card>
@@ -58,15 +53,15 @@ export default function PricingPage() {
           <Card className="p-6 w-1/3">
             <CardHeader>
               <div className="text-3xl text-center w-full font-extrabold text-secondary">
-                $59.99 <span className="text-sm">/mo</span>
+                $5 McChicken Meal Deal <span className="text-sm" />
               </div>
             </CardHeader>
             <CardBody>
               <ul className="list-disc pl-5 text-xl">
-                <li>Unlimited monthly orders</li>
-                <li>100,000 customer limit</li>
-                <li>AI powered bookkeeping and invoices</li>
-                <li>Standard + Express shipping</li>
+                <li>McChicken Sanwich</li>
+                <li>4-piece chicken nuggets</li>
+                <li>Small world famous fries</li>
+                <li>Small soft drink</li>
               </ul>
             </CardBody>
             <CardFooter className="justify-center">
@@ -77,7 +72,7 @@ export default function PricingPage() {
                   thisDoesNothingToast();
                 }}
               >
-                Sign Up
+                Order
               </Button>
             </CardFooter>
           </Card>
@@ -86,15 +81,14 @@ export default function PricingPage() {
           <Card className="p-6 w-1/3">
             <CardHeader>
               <div className="text-3xl text-center w-full font-extrabold text-success">
-                Custom
+                $4 Breakfast Meal Deal
               </div>
             </CardHeader>
             <CardBody>
               <ul className="list-disc pl-5 text-xl">
-                <li>Unlimited monthly orders</li>
-                <li>Unlimited customers</li>
-                <li>Custom shipping</li>
-                <li>AI tools</li>
+                <li>Choose 1: Sausage McMuffin or Sausage Biscuit</li>
+                <li>Comes with Hashbrown</li>
+                <li>Comes with a small McCafe Premium Roast Coffee</li>
               </ul>
             </CardBody>
             <CardFooter className="justify-center">
@@ -105,27 +99,11 @@ export default function PricingPage() {
                   thisDoesNothingToast();
                 }}
               >
-                Contact Us
+                Order
               </Button>
             </CardFooter>
           </Card>
         </div>
-      </section>
-
-      <section className="my-40">
-        <h2 className="text-center text-4xl font-bold">FAQ</h2>
-        <Accordion>
-          <AccordionItem key={1} title="Why time machines?">
-            Because noboody else sells them!
-          </AccordionItem>
-          <AccordionItem
-            key={2}
-            title="How many time machines do we sell per year?"
-          >
-            According to our 2063 statistics, we sold roughly 4800 time
-            machines.
-          </AccordionItem>
-        </Accordion>
       </section>
     </div>
   );

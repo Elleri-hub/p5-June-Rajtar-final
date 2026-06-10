@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
 import { Button } from "@heroui/button";
 
 import { title, subtitle } from "@/components/primitives";
@@ -19,12 +17,13 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Discount&nbsp;</span>
-        <span className={title({ color: "violet" })}>Time Machine&nbsp;</span>
+        {/* <span className={title({ color: "bg-orange-500"})}>#</span> */}
+        <span className={title({ color: "yellow" })}>McDonalds Menu</span>
         <br />
-        <span className={title()}>Wholesale</span>
+        <span className={title()}>Ordering</span>
         <div className={subtitle({ class: "mt-4" })}>
-          A project template for YOU to make your own!
+          You get a choice of three meals to order from. Click through the pages
+          to learn more about what you can order!
         </div>
       </div>
 
@@ -36,14 +35,6 @@ export default function Home() {
             Spin
           </Button>
         </div>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
       </div>
     </section>
   );

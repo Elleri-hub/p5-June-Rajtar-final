@@ -10,19 +10,20 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
+      label: "Order",
       href: "/pricing",
     },
     {
-      label: "Blog",
+      label: "Breakfast Meal",
+      href: "/docs",
+    },
+
+    {
+      label: "McDouble Meal",
       href: "/blog",
     },
     {
-      label: "About",
+      label: "McChicken Meal",
       href: "/about",
     },
   ],

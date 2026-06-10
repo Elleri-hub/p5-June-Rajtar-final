@@ -3,8 +3,6 @@
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { addToast } from "@heroui/toast";
 
-import { title } from "@/components/primitives";
-
 export default function BlogPage() {
   const Post = ({
     title,
@@ -44,19 +42,38 @@ export default function BlogPage() {
 
   return (
     <div>
-      <h1 className={title()}>Blog</h1>
-      <div className="mt-20 flex flex-col gap-6">
-        <Post
-          date={new Date("2025-02-26")}
-          description="An example post. You could do some cool stuff with this. This is a good example of using custom components within the same page."
-          title="Example 1"
-        />
-        <Post
-          date={new Date("2025-01-15")}
-          description="Time machine sales are down! Demand decreases as AI take over."
-          title="Time Machine Sales Statistics"
+      <h1 className="color : bg-red-600 text-center text-5xl">
+        $6 McDouble Meal Deal
+      </h1>
+      <div>
+        <img
+          alt="meal 1"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTeslFD_LOytgcXT8YGmtFqzRfcYXdBBilAw&s"
         />
       </div>
+      <h1 className="color : bg-yellow-300 text-center text-5xl">Dietary</h1>
+      <p>Calories: 1,090</p>
+      <p>Total Fat: 52g (66% DV)</p>
+      <p>Saturated Fat: 14g (68% DV)</p>
+      <p>Cholesterol: 105mg (34% DV)</p>
+      <p>Sodium: 1,390mg (60% DV)</p>
+      <p>Total Carbohydrates: 124g (45% DV)</p>
+      <p>Dietary Fiber: 5g (17% DV)</p>
+      <p>Total Sugars: 58g (114% DV)</p>
+      <p>Added Sugars: 56g</p>
+      <p>Protein: 34g</p>
+      <p>Calcium: 116mg (8% DV)</p>
+      <p>Iron: 4.5mg (26% DV)</p>
+      <p>Potassium: 950mg (20% DV)</p>
+
+      <h1 className="color : bg-red-600 text-center text-5xl">Allergens</h1>
+      <p />
+      <p>Beef (100% pure, no fillers)</p>
+      <p>Wheat (in bun and some ingredients)</p>
+      <p>Milk (in American cheese)</p>
+      <p>Soy (in cheese, mayonnaise, and some nugget batters)</p>
+      <p>Egg (in mayonnaise)</p>
+      <p>May contain sesame </p>
     </div>
   );
 }
